@@ -1,5 +1,5 @@
 # barcharty
-
+This is a module for creating a customizable bar chart.
 
 ## Installation Guide
 Go the directory where you want to add the module, then clone the repository:
