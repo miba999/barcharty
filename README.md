@@ -1,5 +1,5 @@
 # barcharty
-This is a module for creating a customizable bar chart.
+This is a module for creating a customizable bar chart, and part of the course 1DV610 Introduction to Software Quality at LNU.
 
 ## Installation Guide
 Go the directory where you want to add the module, then clone the repository:
