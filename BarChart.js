@@ -11,6 +11,7 @@ export default class BarChart {
   #chartAreaYpos
   #context
   #data
+  #categories
 
   /**
    * Creates a bar chart given the id of the canvas element
@@ -33,6 +34,7 @@ export default class BarChart {
    * @param {Array} xLabels - An array of strings representing the categories for the x-axis
    */
   setCategories(xLabels) {
+    this.#categories = xLabels;
     const barAreaWidth = this.#chartAreaWidth / xLabels.length
     const y = this.#chartAreaYpos + this.#chartAreaHeight + 16
 
@@ -205,6 +207,7 @@ export default class BarChart {
   }
 
   #drawChart() {
+    this.#context.clearRect(0, 0, this.#canvas.width, this.#canvas.height);
     this.#setChartAreaOrigin()
     this.#setChartAreaWidth()
     this.#setChartAreaHeight()
@@ -215,6 +218,11 @@ export default class BarChart {
       this.#drawYAxisScale(this.#data)
       this.#drawHorizontalLines(this.#data)
       this.#drawBars(this.#data, this.#barColor)
+      this.#drawXAxis('#000000')
+    }
+    if (typeof this.#categories !== 'undefined') {
+      this.setCategories(this.#categories)
+      this.#drawXAxis('#000000')
     }
   }
 
