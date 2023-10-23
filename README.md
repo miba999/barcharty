@@ -1,7 +1,7 @@
 # barcharty
 This is a module for creating a customizable bar chart, and part of the course 1DV610 Introduction to Software Quality at LNU.
 
-## Installation Guide
+## 1. Installation Guide
 Go the directory where you want to add the module, then clone the repository:
 ```
 git clone https://github.com/miba999/barcharty.git
@@ -13,7 +13,7 @@ import BarChart from './barcharty/BarChart.js'
 ```
 Don't forget to add an HTML canvas element, and give it an id that will be used for creating the bar chart.
 
-## Code Example
+## 2. Code Example
 Create a canvas HTML element with an id that is used to draw the bar chart. 
 ```html
 <canvas id="canvas"></canvas>
@@ -41,7 +41,7 @@ barchart.setCategories(categories)
 The created barchart would look something like this:
 ![Example of bar chart](./images/example-bar-chart.png)
 
-## BarChart.js
+## 3. Documentation: BarChart.js
 BarChart is a class for creating bar charts on a HTML canvas element. 
 
 Include the `BarChart.js` file in your project and then create an instance of the `BarChart` class to generate a bar chart.
@@ -161,3 +161,11 @@ Sets the label for the y-axis.
 ```js
 barchart.setYAxisLabel('Number of votes')
 ```
+
+
+
+## 4. Bug Reports/Issues
+If you find any bugs or have suggestions for improvements, please report them as GitHub issues [here](https://github.com/miba999/barcharty/issues).
+
+## 5. License
+Barcharty is licensed under the MIT License. See the LICENSE file for details.
